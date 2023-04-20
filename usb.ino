@@ -23,7 +23,21 @@ void displayKeyCodes(void) {
 }
 
 void usb () {
-  while (1) {
+
+  do {
+    dfpSerial.begin(9600);
+    delay(1000);
+    //playFirst();
+    isPlaying = false;
+
+    setVolume(currVolume);
+    delay(500);
+
+    Serial.println("Setup Completed.");
+  } while (0);
+
+
+  while (toggleState_3 == 1) {
     // Button PREVIOUS / Volume DOWN
     if (digitalRead(buttonPrevious) == LOW) {
       if (buttonActiveL == false) {
@@ -99,9 +113,9 @@ void usb () {
         buttonActiveR = false;
       }
     }
-    if (digitalRead(digitalRead(mswitch_3)) == LOW || digitalRead(mswitch_4) == LOW || digitalRead(mswitch_5) == LOW || digitalRead(mswitch_6) == LOW || digitalRead(mswitch_7) == LOW || digitalRead(mswitch_8) == LOW || digitalRead(mswitch_9) == LOW || digitalRead(mswitch_10) == LOW) {
-      break;
-    }
+
+    input() ;
+  
   }
 }
 

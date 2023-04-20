@@ -22,7 +22,7 @@ byte eepromRead(byte highAddress, byte lowAddress) {
 
 
 /*
-   highAddress = chip address
-   lowAddress = memory cell address
+   highAddress = chip address start from 0
+   lowAddress = memory cell address start from 0
    data = value to be store in the memory cell
 */

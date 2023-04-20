@@ -47,7 +47,6 @@ void relayOnOff(int relay) {
         digitalWrite(relay_8, LOW);
         digitalWrite(relay_9, LOW);
         digitalWrite(relay_10, LOW);
-        digitalWrite(relay_11, LOW);
         eepromWrite(0 , 13 , HIGH);
         eepromWrite(0 , 14 , LOW);
         eepromWrite(0 , 15 , LOW);
@@ -64,9 +63,9 @@ void relayOnOff(int relay) {
         toggleState_8 = 0;
         toggleState_9 = 0;
         toggleState_10 = 0;
-        lcd.setCursor(0, 2);
+        lcd.setCursor(0, 1);
         lcd.print("                ");
-        lcd.setCursor(7, 2);
+        lcd.setCursor(7, 1);
         lcd.print("USB");
         usb();
       } /*else {
@@ -86,7 +85,6 @@ void relayOnOff(int relay) {
         digitalWrite(relay_8, LOW);
         digitalWrite(relay_9, LOW);
         digitalWrite(relay_10, LOW);
-        digitalWrite(relay_11, LOW);
         eepromWrite(0 , 13 , LOW);
         eepromWrite(0 , 14 , HIGH);
         eepromWrite(0 , 15 , LOW);
@@ -103,10 +101,13 @@ void relayOnOff(int relay) {
         toggleState_8 = 0;
         toggleState_9 = 0;
         toggleState_10 = 0;
-        lcd.setCursor(0, 2);
+        lcd.setCursor(0, 1);
         lcd.print("                ");
-        lcd.setCursor(6, 2);
+        lcd.setCursor(6, 1);
         lcd.print("FM");
+        delay(200);
+        lcd.setCursor(0, 1);
+        lcd.print("                ");
         fm();
       }
       /*else {
@@ -126,7 +127,6 @@ void relayOnOff(int relay) {
         digitalWrite(relay_8, LOW);
         digitalWrite(relay_9, LOW);
         digitalWrite(relay_10, LOW);
-        digitalWrite(relay_11, LOW);
         eepromWrite(0 , 13 , LOW);
         eepromWrite(0 , 14 , LOW);
         eepromWrite(0 , 15 , HIGH);
@@ -143,9 +143,9 @@ void relayOnOff(int relay) {
         toggleState_8 = 0;
         toggleState_9 = 0;
         toggleState_10 = 0;
-        lcd.setCursor(0, 2);
+        lcd.setCursor(0, 1);
         lcd.print("                ");
-        lcd.setCursor(6, 2);
+        lcd.setCursor(6, 1);
         lcd.print("BT");
       }
       /*else {
@@ -165,7 +165,6 @@ void relayOnOff(int relay) {
         digitalWrite(relay_8, LOW);
         digitalWrite(relay_9, LOW);
         digitalWrite(relay_10, LOW);
-        digitalWrite(relay_11, LOW);
         eepromWrite(0 , 13 , LOW);
         eepromWrite(0 , 14 , LOW);
         eepromWrite(0 , 15 , LOW);
@@ -182,9 +181,9 @@ void relayOnOff(int relay) {
         toggleState_8 = 0;
         toggleState_9 = 0;
         toggleState_10 = 0;
-        lcd.setCursor(0, 2);
+        lcd.setCursor(0, 1);
         lcd.print("                ");
-        lcd.setCursor(5, 2);
+        lcd.setCursor(5, 1);
         lcd.print("LINE 1");
       }
       /*else {
@@ -204,7 +203,6 @@ void relayOnOff(int relay) {
         digitalWrite(relay_8, LOW);
         digitalWrite(relay_9, LOW);
         digitalWrite(relay_10, LOW);
-        digitalWrite(relay_11, LOW);
         eepromWrite(0 , 13 , LOW);
         eepromWrite(0 , 14 , LOW);
         eepromWrite(0 , 15 , LOW);
@@ -221,9 +219,9 @@ void relayOnOff(int relay) {
         toggleState_8 = 0;
         toggleState_9 = 0;
         toggleState_10 = 0;
-        lcd.setCursor(0, 2);
+        lcd.setCursor(0, 1);
         lcd.print("                ");
-        lcd.setCursor(5, 2);
+        lcd.setCursor(5, 1);
         lcd.print("LINE 2");
       }/* else {
         digitalWrite(relay_3, LOW); // turn off relay 7
@@ -242,7 +240,6 @@ void relayOnOff(int relay) {
         digitalWrite(relay_8, HIGH);
         digitalWrite(relay_9, LOW);
         digitalWrite(relay_10, LOW);
-        digitalWrite(relay_11, LOW);
         eepromWrite(0 , 13 , LOW);
         eepromWrite(0 , 14 , LOW);
         eepromWrite(0 , 15 , LOW);
@@ -259,9 +256,9 @@ void relayOnOff(int relay) {
         toggleState_8 = 1;
         toggleState_9 = 0;
         toggleState_10 = 0;
-        lcd.setCursor(0, 2);
+        lcd.setCursor(0, 1);
         lcd.print("                ");
-        lcd.setCursor(5, 2);
+        lcd.setCursor(5, 1);
         lcd.print("LINE 3");
       }
       /*else {
@@ -281,7 +278,6 @@ void relayOnOff(int relay) {
         digitalWrite(relay_8, LOW);
         digitalWrite(relay_9, HIGH);
         digitalWrite(relay_10, LOW);
-        digitalWrite(relay_11, LOW);
         eepromWrite(0 , 13 , LOW);
         eepromWrite(0 , 14 , LOW);
         eepromWrite(0 , 15 , LOW);
@@ -298,9 +294,9 @@ void relayOnOff(int relay) {
         toggleState_8 = 0;
         toggleState_9 = 1;
         toggleState_10 = 0;
-        lcd.setCursor(0, 2);
+        lcd.setCursor(0, 1);
         lcd.print("                ");
-        lcd.setCursor(6, 2);
+        lcd.setCursor(6, 1);
         lcd.print("CD");
       }
       /*else {
@@ -320,7 +316,6 @@ void relayOnOff(int relay) {
         digitalWrite(relay_8, LOW);
         digitalWrite(relay_9, LOW);
         digitalWrite(relay_10, HIGH);
-        digitalWrite(relay_11, LOW);
         eepromWrite(0 , 13 , LOW);
         eepromWrite(0 , 14 , LOW);
         eepromWrite(0 , 15 , LOW);
@@ -337,9 +332,9 @@ void relayOnOff(int relay) {
         toggleState_8 = 0;
         toggleState_9 = 0;
         toggleState_10 = 1;
-        lcd.setCursor(0, 2);
+        lcd.setCursor(0, 1);
         lcd.print("                ");
-        lcd.setCursor(4, 2);
+        lcd.setCursor(4, 1);
         lcd.print("DIGITAL");
       }
       /*else {
@@ -360,7 +355,7 @@ void relayOnOff(int relay) {
         digitalWrite(relay_11, LOW); // turn off relay 11
         toggleState_11 = 0;
         eepromWrite(0 , 21 , LOW);
-        lcd.setCursor(5, 2);
+        lcd.setCursor(8, 0);
         lcd.print("    ");
       }
       delay(100);
@@ -369,7 +364,14 @@ void relayOnOff(int relay) {
     case 12:
       if (toggleState_12 == 0) {
         digitalWrite(relay_12, HIGH); // turn on relay 12 POWER
+        lcd.backlight();
+        lcd.init();
+        lcd.clear();
         toggleState_12 = 1;
+        if(count == 1){
+          eepromcheckstate();
+          count ++ ;
+        }
       }
       else {
         digitalWrite(relay_12, LOW); // turn off relay 12
