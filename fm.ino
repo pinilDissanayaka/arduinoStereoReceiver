@@ -18,13 +18,16 @@ void fm() {
     lcd.createChar(1, LED);
     lcd.createChar(2, PEAK);
     lcd.createChar(3, HPEAK);
-    lcd.clear();
+    lcd.setCursor(0, 2);
+    lcd.print("                ");
+    lcd.setCursor(0, 3);
+    lcd.print("                ");
     lcd.setCursor(0, 2);
     lcd.print("FM:         ");
   } while (0);
 
 
-  while (1) {
+  while (toggleState_4 == 1) {
 
     now = millis();
 
@@ -37,9 +40,9 @@ void fm() {
         lcd.setCursor(5, 2);
         lcd.print(current_freq);
         lcd.setCursor(0, 3);
-        if (stereo){
+        if (stereo) {
           lcd.print("STEREO         ");
-        }else{
+        } else {
           lcd.print("MONO           ");
         }
         lcd.setCursor(7, 3);
@@ -155,9 +158,7 @@ void fm() {
 
     delay(50);
 
-    if (digitalRead(digitalRead(mswitch_3)) == LOW || digitalRead(mswitch_4) == LOW || digitalRead(mswitch_5) == LOW || digitalRead(mswitch_6) == LOW || digitalRead(mswitch_7) == LOW || digitalRead(mswitch_8) == LOW || digitalRead(mswitch_9) == LOW || digitalRead(mswitch_10) == LOW) {
-      break;
-    }
+    input();
 
   }
 }
